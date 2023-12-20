@@ -25,6 +25,7 @@ public class ejerciciosFunciones {
 		if(usuario.equals("usuario1") && contrasena.equals("asdasd"))
 			System.out.println("Ha iniciado sesión satisfactoriamente");
 	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
