@@ -94,6 +94,20 @@ public class EjerciciosRecursividad {
 		}
 	}
 	
+	static int terminoFibonacciAux(int n, int an_2, int an_1) {
+		int an_2aux, an_1aux;
+		
+		if(n == 2) {
+			return an_2 + an_1;
+		}else {
+			an_1aux = an_2;
+			an_2aux = an_2 + an_1;
+			return terminoFibonacciAux(n - 1 , an_2aux, an_1aux);
+		}
+	}
+	static int terminoFibonacciMejorado(int n) {
+		return terminoFibonacciAux(n, 1, 1);
+	}
 	
 	public static int minimoComunMultiplo(int n, int x) {
 		return (n * x) / maximoComunDivisor(n, x);
@@ -113,6 +127,7 @@ public class EjerciciosRecursividad {
 		System.out.println(terminoFibonacci(6));
 		System.out.println(maximoComunDivisorMejorada(9,9));
 		System.out.println(minimoComunMultiplo(20, 16));
+		System.out.println(terminoFibonacciMejorado(6));
 	}
 
 }
